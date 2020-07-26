@@ -16,6 +16,17 @@ function App() {
       <header>
         <NavBar />
       </header>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path='/listings' component={ListingContainer} />
+          <Route exact path='/listings/new' component={NewListingForm} />
+          <Route path='/listings/:listingId' component={ListingPage} />
+          <Route exact path='/login' component={LoginFormContainer}/>
+          <Route exact path='/signup' component={SignUpFormContainer} />
+          <Route exact path='/trips' component={TripContainer} />
+        </Switch>
+      </div>
     </div>
   );
 }
